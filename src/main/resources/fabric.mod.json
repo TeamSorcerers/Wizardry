@@ -1,0 +1,54 @@
+{
+	"schemaVersion": 1,
+	"id": "wizardry",
+	"version": "${version}",
+	"name": "Wizardry",
+	"description": "Delve into spell creation and become a wizard",
+	"authors": [
+		"Mirage", "Escapee", "Gamedroit", "Alley_Boss", "Duck"
+	],
+	"contact": {
+		"homepage": "https://curseforge.com/minecraft/mc-mods/wizardry-mod",
+		"sources": "https://github.com/TeamSorcerers/Wizardry",
+		"issues": "https://github.com/TeamSorcerers/Wizardry/issues",
+		"discord": "https://discord.gg/wsk2PBR"
+	},
+	"license": "",
+	"icon": "wizardry_logo.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"_comment": "Used unicode to escape dollar sign as it was not working",
+				"value": "com.teamsorcerers.wizardry.Wizardry\\u0024CommonInitializer",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"_comment": "Used unicode to escape dollar sign as it was not working",
+				"value": "com.teamsorcerers.wizardry.Wizardry\\u0024ClientInitializer",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "com.teamsorcerers.wizardry.WizardryDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"wizardry.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.9.22"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

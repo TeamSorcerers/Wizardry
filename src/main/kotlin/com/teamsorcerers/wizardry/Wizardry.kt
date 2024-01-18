@@ -21,8 +21,6 @@ class Wizardry {
 		override fun onInitialize() {
 			logger.info("IT'S LEVI-OH-SA, NOT LEVIOSAA")
 
-			// test commit
-
 			ModItems.init()
 		}
 	}

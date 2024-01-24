@@ -5,7 +5,12 @@ import com.teamsorcerers.wizardry.common.init.ModInventoryTabs
 import com.teamsorcerers.wizardry.common.init.ModItems
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.api.ModInitializer
+import net.minecraft.entity.damage.DamageSource
+import net.minecraft.entity.damage.DamageType
+import net.minecraft.registry.RegistryKey
+import net.minecraft.registry.RegistryKeys
 import net.minecraft.util.Identifier
+import net.minecraft.world.World
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
@@ -16,6 +21,10 @@ class Wizardry {
 
 		fun getID(path: String): Identifier {
 			return Identifier(MOD_ID, path)
+		}
+
+		fun getDamageSource(world: World, key: RegistryKey<DamageType>): DamageSource {
+			return DamageSource(world.registryManager.get(RegistryKeys.DAMAGE_TYPE).entryOf(key))
 		}
 	}
 

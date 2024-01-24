@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.minecraft.block.Block
 import net.minecraft.item.BlockItem
+import net.minecraft.item.Item
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 
@@ -20,12 +21,19 @@ object ModBlocks {
 
     fun init() {
         registerBlock("nacre_block", nacre)
-        ModItems.registerItem("nacre_block", BlockItem(nacre, FabricItemSettings()))
+        registerBlock("cloud_block", cloud)
     }
 
-    private fun registerBlock(name: String, block: Block): Block {
-        val registeredBlock = Registry.register(Registries.BLOCK, Wizardry.getID(name), block)
+    private fun registerBlock(name: String, block: Block, blockItem: Boolean = true): Block {
+        var id = Wizardry.getID(name)
+        val registeredBlock = Registry.register(Registries.BLOCK, id, block)
+
+        if (blockItem) {
+            Registry.register(Registries.ITEM, id, BlockItem(block, Item.Settings()))
+        }
+
         blocks.add(registeredBlock)
+
         return registeredBlock
     }
 }

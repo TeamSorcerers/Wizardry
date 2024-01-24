@@ -2,6 +2,7 @@ package com.teamsorcerers.wizardry.common.init
 
 import com.teamsorcerers.wizardry.Wizardry
 import com.teamsorcerers.wizardry.common.item.ItemBook
+import com.teamsorcerers.wizardry.common.item.ItemCape
 import com.teamsorcerers.wizardry.common.item.ItemPearlBelt
 import com.teamsorcerers.wizardry.common.item.ItemStaff
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
@@ -24,6 +25,7 @@ object ModItems {
         registerItem("staff", staff)
         registerItem("book", book)
         registerItem("pearl_belt", pearlBelt)
+        registerItem("cape", cape)
     }
 
     fun registerItem(name: String, item: Item): Item {

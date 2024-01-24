@@ -8,7 +8,6 @@ import net.minecraft.util.Hand
 import net.minecraft.util.TypedActionResult
 import net.minecraft.world.World
 
-
 class ItemPearlBelt(settings: Settings):Item(settings) {
     override fun use(world: World?, user: PlayerEntity?, hand: Hand?): TypedActionResult<ItemStack> {
         user?.playSound(SoundEvents.BLOCK_AMETHYST_BLOCK_HIT,1.0F, 1.0f)

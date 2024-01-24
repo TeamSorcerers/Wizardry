@@ -1,6 +1,7 @@
 package com.teamsorcerers.wizardry.common.init
 
 import com.teamsorcerers.wizardry.Wizardry
+import com.teamsorcerers.wizardry.common.block.BlockCloud
 import com.teamsorcerers.wizardry.common.block.BlockNacre
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
@@ -18,7 +19,11 @@ object ModBlocks {
             .create()
             .strength(4.0f)
     )
-
+    val cloud = BlockCloud(
+        FabricBlockSettings
+            .create()
+            .strength(4.0f)
+    )
     fun init() {
         registerBlock("nacre_block", nacre)
         registerBlock("cloud_block", cloud)

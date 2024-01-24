@@ -19,7 +19,27 @@ import net.minecraft.util.Rarity
 object ModItems {
     val items = mutableListOf<Item>()
 
-    val staff = registerItem("staff", ItemStaff(FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)))
+    val staff = ItemStaff(
+        FabricItemSettings()
+            .maxCount(1)
+            .rarity(Rarity.UNCOMMON)
+    )
+
+    val book = ItemBook(
+        FabricItemSettings()
+            .maxCount(1)
+            .rarity(Rarity.UNCOMMON)
+    )
+    val pearlBelt = ItemPearlBelt(
+        FabricItemSettings()
+            .maxCount(1)
+            .rarity(Rarity.UNCOMMON)
+    )
+    val cape = ItemCape(
+        FabricItemSettings()
+            .maxCount(1)
+            .rarity(Rarity.UNCOMMON)
+    )
 
     fun init() {
         registerItem("staff", staff)

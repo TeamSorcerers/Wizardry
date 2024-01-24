@@ -1,4 +1,9 @@
 {
   "item.wizardry.staff": "Staff",
-  "wizardry:itemgroup": "Wizardry"
+  "item.wizardry.book": "Spellforger's Codex",
+  "item.wizardry.cape": "Cape",
+  "item.wizardry.pearl_belt": "Pearl Belt",
+  "block.wizardry.cloud_block" : "Cloud block",
+  "block.wizardry.nacre_block": "Nacre block",
+  "wizardry:itemgroup.general": "Wizardry"
 }

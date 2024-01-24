@@ -1,5 +1,7 @@
 package com.teamsorcerers.wizardry
 
+import com.teamsorcerers.wizardry.common.init.ModBlocks
+import com.teamsorcerers.wizardry.common.init.ModInventoryTabs
 import com.teamsorcerers.wizardry.common.init.ModItems
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.api.ModInitializer
@@ -9,7 +11,7 @@ import org.slf4j.LoggerFactory
 
 class Wizardry {
 	companion object {
-		const val MOD_ID = "wizardry"
+		private const val MOD_ID = "wizardry"
 		val logger: Logger = LoggerFactory.getLogger(MOD_ID)
 
 		fun getID(path: String): Identifier {
@@ -22,6 +24,8 @@ class Wizardry {
 			logger.info("IT'S LEVI-OH-SA, NOT LEVIOSAA")
 
 			ModItems.init()
+			ModBlocks.init()
+			ModInventoryTabs.init()
 		}
 	}
 

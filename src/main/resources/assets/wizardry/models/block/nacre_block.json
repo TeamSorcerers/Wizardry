@@ -1,0 +1,6 @@
+{
+  "parent": "wizardry:block/nacre_block",
+  "textures": {
+    "all": "wizardry:block/nacre_block"
+  }
+}
